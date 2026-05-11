@@ -7,7 +7,7 @@ struct CreateMoodIntent: AppIntent {
     IntentDescription("This intent launches the app and navigates to the create mood sheet")
   }
   
-  static let supportedModes: IntentModes = [.foreground(.immediate)]
+  static let supportedModes: IntentModes = [.foreground]
   
   func perform() async throws -> some IntentResult {
     .result()

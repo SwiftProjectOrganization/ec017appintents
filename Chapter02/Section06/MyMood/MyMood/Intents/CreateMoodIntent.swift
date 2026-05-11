@@ -7,6 +7,6 @@ struct CreateMoodIntent: TargetContentProvidingIntent {
     IntentDescription("This intent launches the app and navigates to the create mood sheet")
   }
   
-  static let supportedModes: IntentModes = [.foreground(.immediate)]
+  static let supportedModes: IntentModes = [.foreground]
 }
 

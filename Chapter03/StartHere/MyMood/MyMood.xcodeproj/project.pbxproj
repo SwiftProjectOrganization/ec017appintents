@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		622E9B4A2F02B37E001532AB /* MoodUI in Frameworks */ = {isa = PBXBuildFile; productRef = 622E9B492F02B37E001532AB /* MoodUI */; };
+		627653442F4BD7FE00D37236 /* MoodModelIntents in Frameworks */ = {isa = PBXBuildFile; productRef = 627653432F4BD7FE00D37236 /* MoodModelIntents */; };
 		62DCFA492F0F0B7500BB19AF /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 62DCFA482F0F0B7500BB19AF /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				622E9B4A2F02B37E001532AB /* MoodUI in Frameworks */,
+				627653442F4BD7FE00D37236 /* MoodModelIntents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,7 @@
 			name = MyMood;
 			packageProductDependencies = (
 				622E9B492F02B37E001532AB /* MoodUI */,
+				627653432F4BD7FE00D37236 /* MoodModelIntents */,
 			);
 			productName = MyMood;
 			productReference = 622E9AD52F02B1F3001532AB /* MyMood.app */;
@@ -105,6 +108,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				622E9B482F02B37E001532AB /* XCLocalSwiftPackageReference "../../../Support/MoodUI" */,
+				627653422F4BD7FE00D37236 /* XCLocalSwiftPackageReference "../MoodModelIntents" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 622E9AD62F02B1F3001532AB /* Products */;
@@ -353,12 +357,20 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../Support/MoodUI;
 		};
+		627653422F4BD7FE00D37236 /* XCLocalSwiftPackageReference "../MoodModelIntents" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../MoodModelIntents;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		622E9B492F02B37E001532AB /* MoodUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MoodUI;
+		};
+		627653432F4BD7FE00D37236 /* MoodModelIntents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MoodModelIntents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

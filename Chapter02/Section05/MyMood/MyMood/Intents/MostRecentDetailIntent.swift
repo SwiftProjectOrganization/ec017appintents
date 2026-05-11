@@ -9,7 +9,7 @@ struct MostRecentDetailIntent: AppIntent {
     IntentDescription("This intent launches the app and navigates to the detail page for the most recently created mood")
   }
   
-  static let supportedModes: IntentModes = [.foreground(.immediate)]
+  static let supportedModes: IntentModes = [.foreground]
   
   @Dependency
   private var navigation: NavigationManager
