@@ -7,7 +7,6 @@ import AppIntents
 public struct MoodList: View {
   private var sections: [Date: [MoodEntry]]
   @Environment(\.modelContext) private var context
-  @AppStorage("displayCreateMoodTip") private var displaySiriTip = true
   
   
   public init(_ moods: [MoodEntry]) {
@@ -19,8 +18,6 @@ public struct MoodList: View {
 extension MoodList {
   public var body: some View {
     List {
-      SiriTipView(intent: CreateMoodIntent(),
-                  isVisible: $displaySiriTip)
       ForEach(sections.map(\.key).sorted(by: >),
               id: \.self) { section in
         Section(header: Text(section, style: .date)) {

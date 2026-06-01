@@ -18,7 +18,7 @@ public enum Activity: String, Codable, Equatable, Sendable, CaseIterable {
   case other
   
   public static func activity(from activityDescription: String) -> Activity {
-    Activity(rawValue: activityDescription) ?? .other
+    Activity(rawValue: activityDescription.lowercased()) ?? .other
   }
 }
 
@@ -31,6 +31,30 @@ extension Activity: Identifiable {
 extension Activity: CustomStringConvertible {
   public var description: String {
     rawValue
+  }
+}
+
+import AppIntents
+
+extension Activity: AppEnum {
+  public static var typeDisplayRepresentation: TypeDisplayRepresentation {
+    TypeDisplayRepresentation("All available activities")
+  }
+  public static var caseDisplayRepresentations: [Activity : DisplayRepresentation] {
+    [.noneChosen: "<...>",
+     .work: "Work",
+     .email: "Email",
+     .online: "Online",
+     .meetings: "Meetings",
+     .friends: "Friends",
+     .shopping: "Shopping",
+     .finances: "Finances",
+     .leisure: "Leisure",
+     .exercising: "Exercising",
+     .chores: "Chores",
+     .rest: "Rest",
+     .other: "Other"
+    ]
   }
 }
 

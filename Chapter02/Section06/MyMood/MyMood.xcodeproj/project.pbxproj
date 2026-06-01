@@ -105,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				622E9B482F02B37E001532AB /* XCLocalSwiftPackageReference "../../../Support/MoodUI" */,
+				62A893DB2FCDC30F0079DA24 /* XCLocalSwiftPackageReference "../../../Support/MoodModel" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 622E9AD62F02B1F3001532AB /* Products */;
@@ -350,6 +351,10 @@
 		622E9B482F02B37E001532AB /* XCLocalSwiftPackageReference "../../../Support/MoodUI" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../Support/MoodUI;
+		};
+		62A893DB2FCDC30F0079DA24 /* XCLocalSwiftPackageReference "../../../Support/MoodModel" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../Support/MoodModel;
 		};
 /* End XCLocalSwiftPackageReference section */
 

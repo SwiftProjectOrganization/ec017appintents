@@ -37,5 +37,21 @@ extension Emotion: Identifiable {
   }
 }
 
+// Used in Ch 3 Sec 3 and beyond
+import AppIntents
 
+extension Emotion: AppEnum {
+  public static var typeDisplayRepresentation: TypeDisplayRepresentation {
+    TypeDisplayRepresentation("An enum containing the emotions")
+  }
+  
+  public static var caseDisplayRepresentations: [Emotion : DisplayRepresentation] {
+    [.verySad: "Very Sad",
+     .sad: "Sad",
+     .ok: "OK",
+     .happy: "Happy",
+     .veryHappy: "Very Happy"
+    ]
+  }
+}
 

@@ -1,25 +1,27 @@
 import AppIntents
 import MoodModel
+import MoodModelIntents
 
-struct CreateTopActivityIntent: AppIntent {
+struct SpecifyActivityIntent: AppIntent {
   static let title = LocalizedStringResource("Open and Create a Mood for an Activity")
   
   static var description: IntentDescription? {
     IntentDescription("This intent launches the app and navigates to the create mood sheet with the activity set to one selected by the user")
   }
   
-  static let supportedModes: IntentModes = [.foreground(.immediate)]
+  static let supportedModes: IntentModes = [.foreground]
   
   @Dependency
   private var navigation: NavigationManager
   
-  @Parameter
-  private var activity: Activity
+  @Parameter(description: "Current activity",
+             requestValueDialog: IntentDialog("Select an activity:"))
+  private var currentActivity: CommonActivity
   
   @MainActor
   func perform() async throws -> some IntentResult {
     navigation.navigateToRoot()
-    navigation.currentActivity = .work
+    navigation.currentActivity = currentActivity.activity
     navigation.isCreatingMood = true
     return .result()
   }

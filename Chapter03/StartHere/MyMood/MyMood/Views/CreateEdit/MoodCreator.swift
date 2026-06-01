@@ -8,8 +8,12 @@ struct MoodCreator: View {
   @Environment(\.modelContext) private var context
   @Environment(\.dismiss) private var dismiss
   
-  init(activity: Activity = defaultActivity) {
-    mood = MoodEntry(activity: activity)
+  init(emotion: Emotion = defaultEmotion,
+       activity: Activity = defaultActivity,
+       detail: String = "") {
+    mood = MoodEntry(emotion: emotion,
+                     activity: activity,
+                     detail: detail)
   }
 }
 

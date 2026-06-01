@@ -9,17 +9,17 @@ struct MoodShortcuts: AppShortcutsProvider {
                 ],
                 shortTitle: "New mood",
                 systemImageName: "square.and.pencil")
-    AppShortcut(intent: CreateTopActivityIntent(),
+    AppShortcut(intent: SpecifyActivityIntent(),
                 phrases: [
-                  "Open and Create Work \(.applicationName)",
-                  "\(.applicationName) open and create a new work mood"
+                  "Open and Create \(.applicationName) for specified activity",
+                  "\(.applicationName) open and request activity to create a new mood"
                 ],
-                shortTitle: "Work mood",
+                shortTitle: "Mood while...",
                 systemImageName: "person.badge.shield.checkmark")
-    AppShortcut(intent: NewEmotionForLatestMoodIntent(),
+    AppShortcut(intent: DuplicateLatestMoodIntent(),
                 phrases: [
-                  "Open to the latest \(.applicationName)",
-                  "\(.applicationName) open to my latest mood"
+                  "Duplicate the latest \(.applicationName)",
+                  "\(.applicationName) duplicate the latest mood"
                 ],
                 shortTitle: "Most recent",
                 systemImageName: "calendar.badge.plus")

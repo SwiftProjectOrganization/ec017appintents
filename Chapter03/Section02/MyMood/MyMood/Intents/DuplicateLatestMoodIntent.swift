@@ -2,14 +2,14 @@ import AppIntents
 import MoodModel
 import SwiftData
 
-struct NewEmotionForLatestMoodIntent: AppIntent {
-  static let title = LocalizedStringResource("Open to most recent Mood")
+struct DuplicateLatestMoodIntent: AppIntent {
+  static let title = LocalizedStringResource("Duplicates most recent Mood")
   
   static var description: IntentDescription? {
-    IntentDescription("This intent launches the app and navigates to the detail page for the most recently created mood")
+    IntentDescription("This intent creates a duplicate of the most recent mood")
   }
   
-  static let supportedModes: IntentModes = [.foreground(.immediate)]
+  static let supportedModes: IntentModes = [.foreground]
   
   @Dependency
   private var navigation: NavigationManager

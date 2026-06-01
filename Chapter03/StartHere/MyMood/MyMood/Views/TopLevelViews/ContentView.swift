@@ -23,7 +23,8 @@ extension ContentView {
         .sheet(isPresented: $navigation.isCreatingMood) {
           navigation.navigateToRoot()
         } content: {
-          MoodCreator(activity: navigation.currentActivity)
+          MoodCreator(emotion: navigation.currentEmotion, activity: navigation.currentActivity,
+                      detail: navigation.moodDetail)
         }
     }
   }
