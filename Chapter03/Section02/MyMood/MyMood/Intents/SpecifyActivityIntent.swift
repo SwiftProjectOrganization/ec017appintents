@@ -16,7 +16,7 @@ struct SpecifyActivityIntent: AppIntent {
   
   @Parameter(description: "Current activity",
              requestValueDialog: IntentDialog("Select an activity:"))
-  private var currentActivity: CommonActivity
+  var currentActivity: CommonActivity
   
   @MainActor
   func perform() async throws -> some IntentResult {

@@ -9,6 +9,10 @@ struct SpecifyActivityIntent: AppIntent {
     IntentDescription("This intent launches the app and navigates to the create mood sheet with the activity and emotion set to one selected by the user")
   }
   
+  static var parameterSummary: some ParameterSummary {
+    Summary("Record Mood for \(\.$currentActivity) while feeling \(\.$currentEmotion) with \(\.$moodDetail).")
+  }
+  
   static let supportedModes: IntentModes = [.foreground]
   
   @Dependency
@@ -16,17 +20,22 @@ struct SpecifyActivityIntent: AppIntent {
   
   @Parameter(description: "Current activity",
              requestValueDialog: IntentDialog("Select an activity:"))
-  var currentActivity: CommonActivity
+   var currentActivity: CommonActivity
   
   @Parameter(description: "Current emotion",
              requestValueDialog: "How are you feeling?")
-  var currentEmotion: Emotion
+   var currentEmotion: Emotion
+  
+  @Parameter(description: "Mood detail",
+             requestValueDialog: "Add something about now.")
+  var moodDetail: String?
   
   @MainActor
   func perform() async throws -> some IntentResult {
     navigation.navigateToRoot()
     navigation.currentActivity = currentActivity.activity
     navigation.currentEmotion = currentEmotion
+    navigation.moodDetail = moodDetail ?? "(No detail provided)"
     navigation.isCreatingMood = true
     return .result()
   }

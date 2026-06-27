@@ -21,7 +21,7 @@ struct SpecifyActivityIntent: AppIntent {
   
   @Parameter(description: "Current activity",
              optionsProvider: ActivityProvider())
-  private var currentActivity: String
+  var currentActivity: String
   
   @MainActor
   func perform() async throws -> some IntentResult {
