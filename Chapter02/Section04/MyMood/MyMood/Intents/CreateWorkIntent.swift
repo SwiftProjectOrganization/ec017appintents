@@ -2,7 +2,7 @@ import AppIntents
 import MoodModel
 
 struct CreateWorkIntent: AppIntent {
-  static let title = LocalizedStringResource("Open and Create a Work Mood")
+  static let title = LocalizedStringResource("Open to Create Work Mood")
   
   static var description: IntentDescription? {
     IntentDescription("This intent launches the app and navigates to the create mood sheet with the activity set to 'work'")

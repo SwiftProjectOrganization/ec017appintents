@@ -3,7 +3,7 @@ import MoodModel
 import SwiftData
 
 struct DuplicateLatestMoodIntent: AppIntent {
-  static let title = LocalizedStringResource("Duplicates most recent Mood")
+  static let title = LocalizedStringResource("Duplicates latest Mood")
   
   static var description: IntentDescription? {
     IntentDescription("This intent creates a duplicate of the most recent mood")

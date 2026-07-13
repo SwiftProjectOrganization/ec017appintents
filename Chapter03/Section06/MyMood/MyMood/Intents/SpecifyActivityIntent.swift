@@ -4,7 +4,7 @@ import MoodModelIntents
 import SwiftData
 
 struct SpecifyActivityIntent: AppIntent {
-  static let title = LocalizedStringResource("Create a Mood for an Activity and Emotion")
+  static let title = LocalizedStringResource("Create Mood for Activity and Emotion")
   
   static var description: IntentDescription? {
     IntentDescription("Create a mood with the activity and emotion set to one selected by the user")

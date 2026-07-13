@@ -7,7 +7,7 @@ import AppIntents
 public struct MoodList: View {
   private var sections: [Date: [MoodEntry]]
   @Environment(\.modelContext) private var context
-  @AppStorage("displayCreateMoodTip") private var displaySiriTip = true
+  @AppStorage("displayCreateMoodTip1") private var displaySiriTip = true
   
   
   public init(_ moods: [MoodEntry]) {
