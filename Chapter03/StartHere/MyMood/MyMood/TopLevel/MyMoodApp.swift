@@ -29,6 +29,10 @@ extension MyMoodApp {
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .onAppIntentExecution(CreateMoodIntent.self) { _ in
+          navigation.navigateToRoot()
+          navigation.isCreatingMood = true
+        }
     }
     .modelContainer(modelContainer)
     .environment(navigation)
