@@ -8,7 +8,9 @@ struct Mouth: View {
 extension Mouth {
   var body: some View {
     mouthShape(in: self.frame)
-      .stroke(style: StrokeStyle(lineWidth: frame.height / 64, lineCap: .round))
+      .stroke(style: StrokeStyle(lineWidth: frame.height / 64,
+                                 lineCap: .round))
+      .foregroundStyle(.black)
   }
 }
 

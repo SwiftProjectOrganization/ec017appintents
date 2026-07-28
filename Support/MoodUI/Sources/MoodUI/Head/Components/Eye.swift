@@ -7,6 +7,7 @@ struct Eye: View {
 extension Eye {
   var body: some View {
     Circle()
+      .foregroundStyle(.black)
       .frame(width: frame.height/16,
              height: frame.height/16, alignment: .top)
       .padding(.horizontal, frame.width/8)

@@ -1,6 +1,6 @@
 import AppIntents
 
-struct CreateMoodIntent: AppIntent {
+struct CreateMoodIntent: TargetContentProvidingIntent {
   static let title = LocalizedStringResource("Open to Create Mood")
   
   static var description: IntentDescription? {
@@ -8,15 +8,5 @@ struct CreateMoodIntent: AppIntent {
   }
   
   static let supportedModes: IntentModes = [.foreground]
-  
-  @Dependency
-  private var navigation: NavigationManager
-  
-  @MainActor
-  func perform() async throws -> some IntentResult {
-    navigation.navigateToRoot()
-    navigation.isCreatingMood = true
-    return .result()
-  }
 }
 
