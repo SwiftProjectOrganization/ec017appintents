@@ -11,11 +11,11 @@ let package = Package(
       targets: ["MoodModelIntents"]
     ),
   ],
-  dependencies: [.package(path: "../../../Support/MoodModel")],
+  dependencies: [.package(path: "../../../Support/MoodUI")],
   targets: [
     .target(
       name: "MoodModelIntents",
-      dependencies: ["MoodModel"],
+      dependencies: ["MoodUI"],
       swiftSettings: [.enableUpcomingFeature("NonisolatedNonsendingByDefault")]
     ),
   ]

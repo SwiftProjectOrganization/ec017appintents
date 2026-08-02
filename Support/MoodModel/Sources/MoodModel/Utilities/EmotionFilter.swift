@@ -1,4 +1,4 @@
-public enum EmotionFilter {
+public enum EmotionFilter: CaseIterable {
   case isHappy
   case isOK
   case isSad

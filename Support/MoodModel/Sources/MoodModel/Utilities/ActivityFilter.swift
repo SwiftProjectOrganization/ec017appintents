@@ -14,3 +14,13 @@ extension ActivityFilter {
   }
 }
 
+extension ActivityFilter {
+  public static func filter(for activity: Activity?) -> Self {
+    if let activity {
+      return .isActivity(activity)
+    } else {
+      return .isAny
+    }
+  }
+}
+
