@@ -3,7 +3,7 @@ import AppIntents
 struct DisappointingIntent: AppIntent {
   static let title: LocalizedStringResource = "Example intent"
   
-  static var description: IntentDescription {
+  static var description: IntentDescription? {
     IntentDescription("This intent does nothing but display a dialog.")
   }
   

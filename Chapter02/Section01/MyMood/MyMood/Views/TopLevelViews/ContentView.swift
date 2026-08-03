@@ -21,7 +21,9 @@ extension ContentView {
         .navigationTitle("Moods")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $navigation.isCreatingMood) {
-          navigation.navigateToRoot()
+          if navigation.isCreatingMood {
+            navigation.navigateToRoot()
+          }
         } content: {
           MoodCreator()
         }

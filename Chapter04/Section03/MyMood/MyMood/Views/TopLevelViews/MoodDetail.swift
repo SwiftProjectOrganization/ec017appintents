@@ -27,7 +27,9 @@ extension MoodDetail {
       Spacer()
     }
     .sheet(item: $navigation.modifyingState) {
-      navigation.navigateToRoot()
+      if navigation.isCreatingMood {
+        navigation.navigateToRoot()
+      }
     } content: { item in
       switch (navigation.modifyingState!) {
       case .duplicating: MoodDuplicator(mood)
